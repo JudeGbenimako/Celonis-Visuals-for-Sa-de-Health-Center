@@ -1,28 +1,54 @@
-# Celonis-Visuals-for-Saude-Health-Center
+# Saúde+ | Healthcare Process Mining and Analytics
 
-# Celonis Process Mining Assignment
+**NOVA IMS | Business Process Management | June 2025**
 
-This repository contains reports, visualizations, and analysis files from a process mining assignment performed in Celonis.  
-It covers data exploration, KPI dashboards, time-based analysis, and region-based process insights for healthcare appointments.
+## Overview
 
-## Contents
+This academic project used **Celonis** to analyze appointment workflows at Saúde+ Health Center, a Portugal-based clinical appointment process case study. The analysis explored patient journeys, process variants, throughput times, cancellations, service performance, and patient/customer segmentation to identify potential improvement opportunities.
 
-- 📊 **Celonis Visuals** – Screenshots of dashboards and charts
-- 📄 **Final Report** – PDF report summarizing findings and recommendations
-- 📁 **Raw Data** – (Add if applicable: original CSVs, Excel, or data extracts)
+## Data and ETL
 
-## Key Analysis Areas
+The assignment provided:
+- A **case table** with appointment attributes, such as patient demographics, insurance status, satisfaction, and costs.
+- An **event log** with timestamped process activities linked to each case.
 
-- End-to-end process duration (total and average throughput time)
-- Monthly trends by region
-- Process KPIs (appointments, cancellations, etc.)
-- Segmentation and mapping of patient data
+The project imported both tables into Celonis, checked their schemas, performed SQL-based preprocessing, linked them by `case_id`, and defined the event log as the process activity table. The reported load contained **6,245 combined rows**.
 
-## Getting Started
+## Analysis and dashboards
 
-This project is best viewed using the included PDFs and screenshots.  
-Original Celonis analyses were performed in the cloud platform and can be reproduced using the provided datasets.
+The Celonis work included:
+- **Variant Explorer:** Compared frequent patient journey sequences and variants.
+- **Process Explorer:** Mapped process activities and transitions, including consultation, payment, cancellations, and exits.
+- **Case Explorer:** Examined case-level throughput times and exceptional journeys.
+- **Activity Explorer:** Explored activity frequencies and durations.
+- **Overview and segmentation dashboards:** Analyzed appointment volumes, cancellations, satisfaction, demographics, and costs.
 
----
+## Selected findings
 
-*For questions or collaboration, please open an issue or contact the repository owner.*
+The academic report documented:
+- **148** distinct patient-journey variants.
+- **611** cancelled appointments, reported as approximately **32%** of appointments.
+- Differences in appointment experiences across patient groups and journey types.
+
+These are descriptive findings from the case study; proposed improvements were not experimentally validated.
+
+## Technology and methods
+
+Celonis EMS, SQL-based ETL, Process Query Language (PQL) for process analytics, event-log modeling, process discovery and variant exploration, throughput-time analysis, KPI dashboards, and patient segmentation.
+
+**Methodological note:** The project report documents process and variant exploration. It does not provide a formal conformance-checking fitness or alignment score.
+
+## Repository contents
+
+- [Celonis Visuals.pdf](Celonis%20Visuals.pdf) — PDF showcase of the project's dashboard screenshots and analysis.
+- `README.md` — Project documentation.
+
+The original case/event datasets, live Celonis workspace, and complete academic report are **not included** in this repository. The PDF is a static portfolio showcase.
+
+## Team
+
+Group T: **Inês Araújo, Jude Gbenimako, Tomás Ribeiro, Afonso Gião, and Solveig Notø**, as listed in the submitted project report.
+
+## Academic context
+
+NOVA Information Management School (NOVA IMS), MSc in Data Science and Advanced Analytics, Business Process Management (2024/2025).
